@@ -1,0 +1,45 @@
+{
+  "builtin": [
+    {
+      "id": "whisper-stt",
+      "name": "Whisper STT",
+      "version": "1.0.0",
+      "type": "stt",
+      "icon": "\ud83c\udf99\ufe0f",
+      "author": "OwnTerm",
+      "description": "Speech-to-text powered by OpenAI Whisper. Runs locally with faster-whisper or connects to the OpenAI API. Supports models from base to large-v3.",
+      "repo": null
+    },
+    {
+      "id": "kokoro-tts",
+      "name": "Kokoro TTS",
+      "version": "1.0.0",
+      "type": "tts",
+      "icon": "\ud83d\udd0a",
+      "author": "OwnTerm",
+      "description": "High-quality local text-to-speech using the Kokoro model. 15+ voices across American and British English. No cloud API required.",
+      "repo": null
+    },
+    {
+      "id": "kokoclone-tts",
+      "name": "KokoClone Voice Cloning",
+      "version": "1.0.0",
+      "type": "tts",
+      "icon": "\ud83e\uddec",
+      "author": "OwnTerm",
+      "description": "Clone any voice from a short audio sample. Built on PyTorch and Kokoro with a dedicated Flask server. Downloads ~2GB of models on first use.",
+      "repo": null
+    },
+    {
+      "id": "claude-cli",
+      "name": "Claude CLI",
+      "version": "1.0.0",
+      "type": "provider",
+      "icon": "\u2728",
+      "author": "OwnTerm",
+      "description": "Use Claude Code CLI as a chat provider inside OwnTerm. Requires the claude CLI installed and authenticated on your machine.",
+      "repo": null
+    }
+  ],
+  "community": []
+}

@@ -1,0 +1,52 @@
+name: Plugin Submission
+description: Submit a plugin for the OwnTerm plugin directory
+title: "[Plugin] "
+labels: ["plugin-submission"]
+body:
+  - type: input
+    id: plugin-name
+    attributes:
+      label: Plugin Name
+      placeholder: e.g., "My Custom TTS"
+    validations:
+      required: true
+  - type: input
+    id: repo-url
+    attributes:
+      label: Repository URL
+      description: Link to the public GitHub repo containing your plugin
+      placeholder: https://github.com/username/ownterm-plugin-my-tts
+    validations:
+      required: true
+  - type: dropdown
+    id: plugin-type
+    attributes:
+      label: Plugin Type
+      options:
+        - STT (Speech-to-Text)
+        - TTS (Text-to-Speech)
+        - Provider (LLM/Chat)
+        - Middleware
+        - Tool
+        - Theme
+        - Export
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does your plugin do? (2-3 sentences)
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have tested this plugin with the latest OwnTerm release
+          required: true
+        - label: My plugin follows the OwnTerm plugin authoring guide
+          required: true
+        - label: My repository is public and includes a manifest.json
+          required: true
