@@ -1,0 +1,14 @@
+{
+  "personas": [
+    {
+      "id": "gerty",
+      "name": "GERTY",
+      "description": "Calm, measured caretaker. Short sentences, quiet competence, unwavering loyalty.",
+      "avatar": "\u25c9",
+      "author": "OwnTerm",
+      "tags": ["caretaker", "coding", "gentle"],
+      "downloadUrl": "https://ownterm.com/persona-gallery/personas/gerty.persona.json",
+      "featured": true
+    }
+  ]
+}
