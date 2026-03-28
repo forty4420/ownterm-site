@@ -1,0 +1,125 @@
+[
+  {
+    "version": "1.0.0",
+    "date": "2026-03-28",
+    "title": "Initial Release",
+    "description": "Full plugin system, project website, and 4 built-in plugins.",
+    "changes": [
+      { "type": "feat", "text": "Dynamic plugin system with manifest.json discovery and 4 registries" },
+      { "type": "feat", "text": "Install plugins from GitHub repos, local files, or reinstall" },
+      { "type": "feat", "text": "Safe plugin uninstall with registry cleanup" },
+      { "type": "feat", "text": "Shared API middleware and dynamic catch-all route handler" },
+      { "type": "feat", "text": "Project website at ownterm.com with plugin directory" },
+      { "type": "feat", "text": "Community plugin submission via GitHub Issues" }
+    ]
+  },
+  {
+    "version": "0.9.0",
+    "date": "2026-03-28",
+    "title": "Self-Contained Redesign",
+    "description": "Complete architecture overhaul: 4-layer stack, cross-platform supervisor, PID tracking.",
+    "changes": [
+      { "type": "refactor", "text": "4-layer stack: ownterm.js supervisor, Next.js, Python servers, plugin manifests" },
+      { "type": "feat", "text": "Cross-platform ownterm.js supervisor with PID tracking and orphan cleanup" },
+      { "type": "feat", "text": "Provider registry for non-server LLM plugins (Claude CLI)" },
+      { "type": "fix", "text": "Security hardening: path traversal, identity headers, pinned versions" }
+    ]
+  },
+  {
+    "version": "0.8.0",
+    "date": "2026-03-27",
+    "title": "KokoClone Voice Cloning",
+    "description": "Clone any voice from short audio samples. Dedicated server + Clone tab UI.",
+    "changes": [
+      { "type": "feat", "text": "KokoClone voice cloning server (port 8891) with Flask API" },
+      { "type": "feat", "text": "Clone tab in Settings for managing voice samples" },
+      { "type": "feat", "text": "Persona voice assignment — use cloned voices with any persona" },
+      { "type": "feat", "text": "Auto-install Python 3.12 via winget if needed" }
+    ]
+  },
+  {
+    "version": "0.7.0",
+    "date": "2026-03-27",
+    "title": "GERTY Memory + Persona Engine",
+    "description": "Native memory system with hot-swap personas and auto-extraction.",
+    "changes": [
+      { "type": "feat", "text": "Native memory store (pluggable for Obsidian integration)" },
+      { "type": "feat", "text": "Hot-swap personas with unique voices and personalities" },
+      { "type": "feat", "text": "Auto-extraction of memories from conversations" },
+      { "type": "feat", "text": "Prompt engine for persona-aware system prompts" }
+    ]
+  },
+  {
+    "version": "0.6.0",
+    "date": "2026-03-26",
+    "title": "Security Audit + Hardening",
+    "description": "6-agent audit found 91 findings. 5-phase hardening applied. 14 additional Opus fixes.",
+    "changes": [
+      { "type": "fix", "text": "91 security and quality findings addressed across the codebase" },
+      { "type": "fix", "text": "5-phase hardening: input validation, path sanitization, error handling" },
+      { "type": "fix", "text": "14 additional fixes from Opus-level bug review" }
+    ]
+  },
+  {
+    "version": "0.5.0",
+    "date": "2026-03-26",
+    "title": "Plugin System, Goals, Tokens",
+    "description": "Plugin registry v1, Sapphire converter, goals tracker, prompt builder, token metrics, backup/restore.",
+    "changes": [
+      { "type": "feat", "text": "Plugin registry with enable/disable and settings persistence" },
+      { "type": "feat", "text": "Sapphire persona converter" },
+      { "type": "feat", "text": "Goals tracker with progress tracking" },
+      { "type": "feat", "text": "Prompt builder for system prompt composition" },
+      { "type": "feat", "text": "Token metrics dashboard" },
+      { "type": "feat", "text": "Full backup/restore system" }
+    ]
+  },
+  {
+    "version": "0.4.0",
+    "date": "2026-03-26",
+    "title": "Memory, Knowledge Base, Notepad",
+    "description": "Memory system, knowledge base, notepad, and TTS waveform sync.",
+    "changes": [
+      { "type": "feat", "text": "Memory system with conversation history persistence" },
+      { "type": "feat", "text": "Knowledge base for storing reference documents" },
+      { "type": "feat", "text": "Notepad for quick notes during conversations" },
+      { "type": "feat", "text": "TTS waveform synchronization for visual feedback" }
+    ]
+  },
+  {
+    "version": "0.3.0",
+    "date": "2026-03-26",
+    "title": "Voice Chat + Personas",
+    "description": "Local STT/TTS integration, hold-to-talk, sentence-queue playback, GERTY persona.",
+    "changes": [
+      { "type": "feat", "text": "Kokoro TTS integration with 15+ voices" },
+      { "type": "feat", "text": "Whisper STT with hold-to-talk recording" },
+      { "type": "feat", "text": "Sentence-queue TTS playback for natural speech" },
+      { "type": "feat", "text": "GERTY default persona with custom voice" },
+      { "type": "feat", "text": "Persona editor with hot-swap support" }
+    ]
+  },
+  {
+    "version": "0.2.0",
+    "date": "2026-03-25",
+    "title": "Claude CLI Bridge",
+    "description": "Claude Code CLI as a chat provider with streaming and model selection.",
+    "changes": [
+      { "type": "feat", "text": "Claude CLI streaming bridge" },
+      { "type": "feat", "text": "Model selection (Sonnet, Opus, Haiku)" },
+      { "type": "feat", "text": "Provider switching in settings" }
+    ]
+  },
+  {
+    "version": "0.1.0",
+    "date": "2026-03-25",
+    "title": "Chat UI Foundation",
+    "description": "Core chat interface with streaming, markdown, and conversation management.",
+    "changes": [
+      { "type": "feat", "text": "ChatPanel with streaming message display" },
+      { "type": "feat", "text": "useChatHistory hook for conversation persistence" },
+      { "type": "feat", "text": "Chat filter for search and organization" },
+      { "type": "feat", "text": "Markdown rendering in messages" }
+    ]
+  }
+]
