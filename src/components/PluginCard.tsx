@@ -58,7 +58,7 @@ export function PluginCard({ plugin }: { plugin: Plugin }) {
         {plugin.description}
       </p>
 
-      {plugin.repo && (
+      {plugin.repo ? (
         <a
           href={plugin.repo}
           target="_blank"
@@ -67,6 +67,10 @@ export function PluginCard({ plugin }: { plugin: Plugin }) {
         >
           View Source &rarr;
         </a>
+      ) : (
+        <span className="mt-auto text-xs text-zinc-500">
+          Included with OwnTerm &mdash; enable in Settings &gt; Plugins
+        </span>
       )}
     </div>
   );
