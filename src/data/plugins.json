@@ -39,6 +39,26 @@
       "author": "OwnTerm",
       "description": "Use Claude Code CLI as a chat provider inside OwnTerm. Requires the claude CLI installed and authenticated on your machine.",
       "repo": null
+    },
+    {
+      "id": "persona-manager",
+      "name": "Persona Manager",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83c\udfad",
+      "author": "OwnTerm",
+      "description": "Create, edit, import, export, and browse community personas. Includes a gallery for discovering and installing personas from the community.",
+      "repo": null
+    },
+    {
+      "id": "chromadb-memory",
+      "name": "ChromaDB Memory",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83e\udde0",
+      "author": "OwnTerm",
+      "description": "Semantic vector memory powered by ChromaDB and all-MiniLM-L6-v2 embeddings. Replaces keyword search with AI-powered retrieval, deduplication, contradiction detection, and temporal decay.",
+      "repo": null
     }
   ],
   "community": []
