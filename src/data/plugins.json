@@ -61,5 +61,36 @@
       "repo": null
     }
   ],
-  "community": []
+  "community": [
+    {
+      "id": "elevenlabs-tts",
+      "name": "ElevenLabs TTS",
+      "version": "1.0.0",
+      "type": "tts",
+      "icon": "\ud83c\udfb5",
+      "author": "OwnTerm Community",
+      "description": "Premium text-to-speech via the ElevenLabs API. 8 pre-configured voices, multilingual support, usage tracking with free-tier limits. Requires an ElevenLabs API key.",
+      "repo": "https://github.com/forty4420/ownterm"
+    },
+    {
+      "id": "audio-processor",
+      "name": "Audio Processor",
+      "version": "1.0.0",
+      "type": "middleware",
+      "icon": "\ud83c\udf9b",
+      "author": "OwnTerm Community",
+      "description": "Professional audio preprocessing before STT \u2014 spectral noise reduction, echo cancellation, voice EQ, and compression. Runs automatically when enabled alongside Whisper.",
+      "repo": "https://github.com/forty4420/ownterm"
+    },
+    {
+      "id": "dnd-game-master",
+      "name": "D&D Game Master",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\u2694\ufe0f",
+      "author": "OwnTerm Community",
+      "description": "Comprehensive D&D 5e Game Master with campaigns, character sheets, combat tracking, dice rolling, NPCs, world lore, quests, and battle grids. Much enhanced with ChromaDB Memory for semantic recall of game events.",
+      "repo": "https://github.com/forty4420/ownterm"
+    }
+  ]
 }
