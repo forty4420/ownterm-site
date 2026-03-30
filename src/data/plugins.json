@@ -197,6 +197,17 @@
       "description": "AI self-extension \u2014 create, read, load, list, and delete custom tool plugins at runtime. The AI can build its own tools on the fly.",
       "repo": null,
       "howToUse": "Enabled by default. Ask the AI to 'create a tool that converts Celsius to Fahrenheit' and it writes a new plugin with manifest.json and handler code. The tool is hot-loaded immediately \u2014 no restart needed. Say 'list my custom tools' or 'delete the temperature tool' to manage them."
+    },
+    {
+      "id": "shell-tools",
+      "name": "Shell Tools",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83d\udda5\ufe0f",
+      "author": "OwnTerm",
+      "description": "Give any AI provider full local machine access \u2014 run shell commands, read and write files, list directories, and search for files. Dangerous operations (run_command, write_file) require your explicit approval before executing.",
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins. Once enabled, any AI provider (not just Claude CLI) can run commands and interact with your filesystem. Ask 'run npm test', 'read ~/config.json', or 'list my Downloads folder'. A confirmation modal will appear before any command is executed or file is written. Safe reads (read_file, list_directory, search_files) run without approval."
     }
   ],
   "community": [
