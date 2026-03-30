@@ -1,5 +1,19 @@
 [
   {
+    "version": "1.1.0",
+    "date": "2026-03-30",
+    "title": "Browser Bridge + Morning Briefing",
+    "description": "New Browser Bridge plugin and Morning Briefing system for autonomous data gathering and spoken delivery.",
+    "changes": [
+      { "type": "feat", "text": "Browser Bridge plugin \u2014 access 55+ web platforms through Chrome sessions via opencli-rs" },
+      { "type": "feat", "text": "Morning Briefing system \u2014 gathers data overnight, delivers spoken summary on app open" },
+      { "type": "feat", "text": "Briefing settings tab with time, auto-speak, persona, and history/replay" },
+      { "type": "feat", "text": "Briefing source hook \u2014 any plugin can contribute data via briefingSources manifest field" },
+      { "type": "feat", "text": "Continuity scheduler special-case for direct tool calls (no LLM tokens for gather)" },
+      { "type": "feat", "text": "REST API for continuity task management from settings UI" }
+    ]
+  },
+  {
     "version": "1.0.0",
     "date": "2026-03-28",
     "title": "Initial Release",

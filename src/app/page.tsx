@@ -3,10 +3,22 @@ import { FeatureCard } from "@/components/FeatureCard";
 
 const FEATURES = [
   {
+    icon: "\ud83c\udf05",
+    title: "Morning Briefing",
+    description:
+      "Wake up to a spoken briefing. OwnTerm gathers GitHub notifications, Reddit mentions, and more overnight \u2014 then delivers a personalized summary when you open the app.",
+  },
+  {
+    icon: "\ud83c\udf10",
+    title: "Browser Bridge",
+    description:
+      "Access 55+ web platforms through your existing Chrome sessions. No API keys \u2014 if you\u2019re logged in, OwnTerm can read it. Powered by opencli-rs.",
+  },
+  {
     icon: "\ud83c\udf99\ufe0f",
     title: "Voice Chat",
     description:
-      "Talk to your AI with local Whisper speech-to-text and Kokoro text-to-speech. No API keys needed for fully local operation.",
+      "Talk to your AI with local Whisper speech-to-text and Kokoro text-to-speech. Clone any voice with KokoClone. No cloud APIs required.",
   },
   {
     icon: "\ud83c\udfad",
@@ -26,18 +38,6 @@ const FEATURES = [
     description:
       "Everything runs on your machine. Your conversations, your voice data, your models \u2014 nothing leaves your network.",
   },
-  {
-    icon: "\u2728",
-    title: "Claude CLI",
-    description:
-      "Use Claude Code as a chat provider directly inside OwnTerm. Full streaming support with model selection.",
-  },
-  {
-    icon: "\ud83e\uddec",
-    title: "Voice Cloning",
-    description:
-      "Clone any voice from short audio samples with KokoClone. Assign cloned voices to personas for a fully custom experience.",
-  },
 ];
 
 export default function Home() {
@@ -51,9 +51,10 @@ export default function Home() {
           Your Machine.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
-          A voice-first AI terminal that runs entirely on your machine. Local
-          speech-to-text, text-to-speech, voice cloning, custom personas, and a
-          plugin system that lets you extend everything.
+          A voice-first AI terminal that runs entirely on your machine. Morning
+          briefings from your browser sessions, local speech-to-text,
+          voice cloning, custom personas, and a plugin system that lets you
+          extend everything.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link

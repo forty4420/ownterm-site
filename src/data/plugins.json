@@ -59,6 +59,26 @@
       "author": "OwnTerm",
       "description": "Semantic vector memory powered by ChromaDB and all-MiniLM-L6-v2 embeddings. Replaces keyword search with AI-powered retrieval, deduplication, contradiction detection, and temporal decay.",
       "repo": null
+    },
+    {
+      "id": "continuity",
+      "name": "Continuity",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83d\udc9f",
+      "author": "OwnTerm",
+      "description": "Autonomous scheduled tasks with cron scheduling, active hours, and chance gates. Powers the Morning Briefing system and custom automations.",
+      "repo": null
+    },
+    {
+      "id": "browser-bridge",
+      "name": "Browser Bridge",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83c\udf10",
+      "author": "OwnTerm",
+      "description": "Access 55+ web platforms through your existing Chrome browser sessions. GitHub, Reddit, Twitter, Hacker News, and more \u2014 no API keys required. Powered by opencli-rs.",
+      "repo": null
     }
   ],
   "community": [
