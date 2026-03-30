@@ -62,9 +62,9 @@
       "type": "tool",
       "icon": "\ud83e\udde0",
       "author": "OwnTerm",
-      "description": "Semantic vector memory powered by ChromaDB and all-MiniLM-L6-v2 embeddings. Replaces keyword search with AI-powered retrieval, deduplication, contradiction detection, and temporal decay.",
+      "description": "Semantic vector memory powered by ChromaDB and all-MiniLM-L6-v2 embeddings. Replaces keyword search with AI-powered retrieval, deduplication, contradiction detection, and temporal decay. Pin any memory to guarantee it always appears in context, immune to decay.",
       "repo": null,
-      "howToUse": "Enable in Settings > Plugins. Memories are automatically extracted from conversations and stored as vectors. The AI retrieves relevant memories based on semantic similarity, not just keywords. Tune deduplication threshold, contradiction detection, and decay rate in plugin settings. View all memories in Settings > Memory."
+      "howToUse": "Enable in Settings > Plugins. Memories are automatically extracted from conversations and stored as vectors. The AI retrieves relevant memories based on semantic similarity, not just keywords. Pin critical memories (hover a memory row and click the pin icon) to guarantee they always appear in every conversation. Tune deduplication threshold, contradiction detection, and decay rate in plugin settings. View all memories in Settings > Memory."
     },
     {
       "id": "continuity",
