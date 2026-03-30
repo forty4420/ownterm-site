@@ -1,5 +1,33 @@
 [
   {
+    "version": "1.4.0",
+    "date": "2026-03-30",
+    "title": "Shell Tools — Action Layer for All Providers",
+    "description": "Any AI provider can now run shell commands, read and write files, and search the filesystem. Not just Claude CLI.",
+    "changes": [
+      { "type": "feat", "text": "Shell Tools plugin — run_command, read_file, write_file, list_directory, search_files" },
+      { "type": "feat", "text": "run_command and write_file require approval before executing (existing modal, zero new surface area)" },
+      { "type": "feat", "text": "Output caps: 8KB for commands, 32KB for file reads — no context overflow" },
+      { "type": "feat", "text": "~ expansion, 30s command timeout, recursive glob search up to configurable depth" },
+      { "type": "fix", "text": "audio_processor_server.py: replaced U+2192 arrow with ASCII — fixed Windows cp1252 startup crash" },
+      { "type": "fix", "text": "lifecycle.ts: globalThis guard on process listeners — eliminated MaxListenersExceededWarning on HMR" },
+      { "type": "fix", "text": "plugin-init.ts + tool-engine.ts + continuity-scheduler.ts: anchor state to globalThis — no more re-registration or duplicate scheduler on hot reload" }
+    ]
+  },
+  {
+    "version": "1.3.0",
+    "date": "2026-03-30",
+    "title": "Pinned Memories",
+    "description": "Mark memories as pinned — they are always included in context and immune to decay.",
+    "changes": [
+      { "type": "feat", "text": "pinned?: boolean field on MemoryEntry — survives decay, always injected into prompt" },
+      { "type": "feat", "text": "Pin/unpin button on every memory row in Settings > Memory (hover to reveal)" },
+      { "type": "feat", "text": "Pinned memories shown first within each category with highlighted styling" },
+      { "type": "feat", "text": "selectRelevantMemories fills pinned slots before scoring unpinned by relevance" },
+      { "type": "feat", "text": "Full ChromaDB + JSON store support: pinned persists across restarts and survives flushDecay" }
+    ]
+  },
+  {
     "version": "1.2.0",
     "date": "2026-03-30",
     "title": "Hands-Free VAD + Layered Prompts + MCP Plugins",
