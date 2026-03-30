@@ -205,9 +205,10 @@
       "type": "tool",
       "icon": "\ud83d\udda5\ufe0f",
       "author": "OwnTerm",
-      "description": "Give any AI provider full local machine access \u2014 run shell commands, read and write files, list directories, and search for files. Dangerous operations (run_command, write_file) require your explicit approval before executing.",
+      "description": "Run shell commands, read/write files, list directories, and manage git workspace snapshots. Auto-watches a directory and checkpoints changes \u2014 safety net for AI-assisted coding sessions.",
+      "port": 8851,
       "repo": null,
-      "howToUse": "Enable in Settings > Plugins. Once enabled, any AI provider (not just Claude CLI) can run commands and interact with your filesystem. Ask 'run npm test', 'read ~/config.json', or 'list my Downloads folder'. A confirmation modal will appear before any command is executed or file is written. Safe reads (read_file, list_directory, search_files) run without approval."
+      "howToUse": "Enable in Settings > Plugins. Once enabled, any AI provider can run commands and interact with your filesystem. New: configure a Watch Directory in settings to auto-snapshot file changes via git stash. Manual snapshot tools (create, list, restore, diff) give the AI a safety net before making changes."
     }
   ],
   "community": [
