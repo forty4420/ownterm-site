@@ -79,6 +79,106 @@
       "author": "OwnTerm",
       "description": "Access 55+ web platforms through your existing Chrome browser sessions. GitHub, Reddit, Twitter, Hacker News, and more \u2014 no API keys required. Powered by opencli-rs.",
       "repo": null
+    },
+    {
+      "id": "memory-tools",
+      "name": "Memory Tools",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83d\udcbe",
+      "author": "OwnTerm",
+      "description": "Save, search, and manage long-term memories via tool calling. Supports categories (identity, preferences, episodic, emotional, facts, technical) and semantic search.",
+      "repo": null
+    },
+    {
+      "id": "meta-tools",
+      "name": "Meta Tools",
+      "version": "2.0.0",
+      "type": "tool",
+      "icon": "\ud83d\udd27",
+      "author": "OwnTerm",
+      "description": "System introspection and prompt self-modification \u2014 12 tools for viewing the system prompt, swapping persona pieces, switching personas, changing voices, and resetting chat.",
+      "repo": null
+    },
+    {
+      "id": "notepad-tools",
+      "name": "Notepad Tools",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83d\udcdd",
+      "author": "OwnTerm",
+      "description": "Read and write to a scratch notepad file. Append, insert, and delete lines \u2014 a simple persistent scratchpad for the AI.",
+      "repo": null
+    },
+    {
+      "id": "network-tools",
+      "name": "Network Tools",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83c\udf10",
+      "author": "OwnTerm",
+      "description": "External IP lookup, internet connectivity check, and website status monitoring. Quick diagnostics for network issues.",
+      "repo": null
+    },
+    {
+      "id": "goal-tools",
+      "name": "Goal Tools",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83c\udfaf",
+      "author": "OwnTerm",
+      "description": "Hierarchical goal tracking with progress percentages and journaling. Create goals, subtasks, update progress, and log journal entries.",
+      "repo": null
+    },
+    {
+      "id": "knowledge-tools",
+      "name": "Knowledge Tools",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83d\udcda",
+      "author": "OwnTerm",
+      "description": "Knowledge base with categories and people contacts. Save, search, and organize information by topic. Store contact details for people you mention.",
+      "repo": null
+    },
+    {
+      "id": "web-tools",
+      "name": "Web Tools",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83d\udd78\ufe0f",
+      "author": "OwnTerm",
+      "description": "Web search, page fetching, Wikipedia lookups, deep research, and link/image extraction. Six tools for gathering information from the web.",
+      "repo": null
+    },
+    {
+      "id": "docs-tools",
+      "name": "Docs Tools",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83d\udcc4",
+      "author": "OwnTerm",
+      "description": "Search OwnTerm project documentation. Helps the AI find answers about how OwnTerm works internally.",
+      "repo": null
+    },
+    {
+      "id": "ai-tools",
+      "name": "AI Tools",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83e\udd16",
+      "author": "OwnTerm",
+      "description": "Delegate analysis questions to a secondary AI call. Useful for complex reasoning that benefits from a separate context window.",
+      "repo": null
+    },
+    {
+      "id": "toolmaker",
+      "name": "Toolmaker",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\u2692\ufe0f",
+      "author": "OwnTerm",
+      "description": "AI self-extension \u2014 create, read, load, list, and delete custom tool plugins at runtime. The AI can build its own tools on the fly.",
+      "repo": null
     }
   ],
   "community": [
