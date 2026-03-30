@@ -1,5 +1,18 @@
 [
   {
+    "version": "1.2.0",
+    "date": "2026-03-30",
+    "title": "Hands-Free VAD + Layered Prompts + MCP Plugins",
+    "description": "Silero VAD hands-free mic mode, context-aware persona behavior layers, and MCP server plugin type.",
+    "changes": [
+      { "type": "feat", "text": "Hands-Free mic mode — Silero VAD via @ricky0123/vad-web; auto-submits speech without button presses" },
+      { "type": "feat", "text": "Layered character prompts — persona layers with keyword triggers that append prompt addenda based on conversation context" },
+      { "type": "feat", "text": "MCP plugin type — connect any MCP server via stdio/SSE/HTTP; tools auto-register into tool engine" },
+      { "type": "feat", "text": "Behavior Layers editor in Persona Manager — add/remove layers with name, icon, triggers, and prompt addendum" },
+      { "type": "feat", "text": "mcp-client.ts + mcp-registry.ts — McpConnection class with connect/listTools/callTool/disconnect lifecycle" }
+    ]
+  },
+  {
     "version": "1.1.0",
     "date": "2026-03-30",
     "title": "Browser Bridge + Morning Briefing",
