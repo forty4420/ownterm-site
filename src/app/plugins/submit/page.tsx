@@ -93,6 +93,11 @@ export default function SubmitPluginPage() {
             <span className="mt-0.5 text-blue-400">&#10003;</span>
             Follows plugin authoring conventions (ports, IDs, security)
           </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-blue-400">&#10003;</span>
+            Includes a <code className="font-mono text-zinc-300">howToUse</code> description
+            in the submission &mdash; a plain-English guide for users
+          </li>
         </ul>
       </div>
 

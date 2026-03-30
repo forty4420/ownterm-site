@@ -90,6 +90,22 @@ export default function AuthoringPage() {
   manifest.json        # metadata + provider config`}
             </pre>
           </div>
+
+          <div>
+            <h3 className="font-mono text-lg font-semibold text-zinc-200">
+              Tool Plugin (JavaScript handler)
+            </h3>
+            <p className="mt-2 text-sm text-zinc-400">
+              Exposes tools the AI can call during conversations. Tools are defined
+              in the manifest and executed by a handler file. Example: browser-bridge,
+              goal-tools, web-tools.
+            </p>
+            <pre className="mt-3 overflow-x-auto rounded-lg border border-zinc-800 bg-zinc-900 p-4 font-mono text-sm text-zinc-300">
+{`~/.ownterm/plugins/my-tools/
+  manifest.json        # metadata + tools array + toolConfig
+  handler.js           # exports execute(toolName, args)`}
+            </pre>
+          </div>
         </div>
       </section>
 
@@ -111,27 +127,38 @@ export default function AuthoringPage() {
   "author": "Your Name",
   "type": "stt",
   "icon": "⚙",
-  "settings": [
+  "settings": [ ... ],
+  "server": { ... },
+
+  // Tool plugins: define tools and a handler
+  "tools": [
     {
-      "key": "model",
-      "type": "select",
-      "label": "Model",
-      "default": "base",
-      "options": [
-        { "value": "base", "label": "Base" },
-        { "value": "large", "label": "Large" }
-      ]
+      "name": "my_tool",
+      "description": "What this tool does",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Search query" }
+        },
+        "required": ["query"]
+      },
+      "tags": ["search"],
+      "permissions": ["network"],
+      "timeout": 10000
     }
   ],
-  "server": {
-    "type": "my-stt",
-    "port": 9100,
-    "label": "My STT",
-    "runtime": "python",
-    "packages": ["flask==3.1.0"],
-    "scriptName": "my_stt_server.py",
-    "healthCheck": "/"
-  }
+  "toolHandler": "handler.js",
+  "toolConfig": { "handlerType": "javascript" },
+
+  // Optional: contribute data to the Morning Briefing
+  "briefingSources": [
+    {
+      "name": "My Notifications",
+      "tool": "my_tool",
+      "args": { "query": "notifications" },
+      "priority": 5
+    }
+  ]
 }`}
         </pre>
       </section>
@@ -231,6 +258,43 @@ export default function AuthoringPage() {
             <p>
               Always pin versions (e.g.,{" "}
               <code className="font-mono text-zinc-300">flask==3.1.0</code>).
+            </p>
+          </div>
+          <div>
+            <h3 className="font-mono font-semibold text-zinc-200">
+              Tool Handlers
+            </h3>
+            <p>
+              Tool plugins export an{" "}
+              <code className="font-mono text-zinc-300">execute(toolName, args)</code>{" "}
+              function in their handler file. Use{" "}
+              <code className="font-mono text-zinc-300">execFile</code> (not{" "}
+              <code className="font-mono text-zinc-300">exec</code>) for spawning
+              external processes to prevent shell injection.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-mono font-semibold text-zinc-200">
+              How to Use Description
+            </h3>
+            <p>
+              When submitting a plugin, include a{" "}
+              <code className="font-mono text-zinc-300">howToUse</code> field in your
+              submission. This is a plain-English guide shown to users on the
+              plugin directory. Explain how to enable it, what to say to the AI,
+              and any setup steps (API keys, downloads, etc.).
+            </p>
+          </div>
+          <div>
+            <h3 className="font-mono font-semibold text-zinc-200">
+              Briefing Sources
+            </h3>
+            <p>
+              Plugins can contribute data to the Morning Briefing by declaring a{" "}
+              <code className="font-mono text-zinc-300">briefingSources</code> array
+              in their manifest. Each source specifies a tool name, arguments,
+              and a priority (lower = more important). The briefing system calls
+              these tools directly during the gather phase.
             </p>
           </div>
         </div>

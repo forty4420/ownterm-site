@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 interface Plugin {
   id: string;
   name: string;
@@ -7,6 +11,7 @@ interface Plugin {
   author: string;
   description: string;
   repo: string | null;
+  howToUse?: string;
 }
 
 const TYPE_COLORS: Record<string, string> = {
@@ -28,6 +33,7 @@ const TYPE_LABELS: Record<string, string> = {
 };
 
 export function PluginCard({ plugin }: { plugin: Plugin }) {
+  const [showHowTo, setShowHowTo] = useState(false);
   const badgeClass =
     TYPE_COLORS[plugin.type] ||
     "bg-zinc-500/20 text-zinc-400 border-zinc-500/30";
@@ -57,6 +63,26 @@ export function PluginCard({ plugin }: { plugin: Plugin }) {
       <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-400">
         {plugin.description}
       </p>
+
+      {/* How to Use */}
+      {plugin.howToUse && (
+        <div className="mb-4">
+          <button
+            onClick={() => setShowHowTo(!showHowTo)}
+            className="flex items-center gap-1.5 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
+          >
+            <span className={`inline-block transition-transform ${showHowTo ? "rotate-90" : ""}`}>
+              &#9654;
+            </span>
+            How to Use
+          </button>
+          {showHowTo && (
+            <p className="mt-2 rounded-lg border border-zinc-800 bg-zinc-900 p-3 text-sm leading-relaxed text-zinc-400">
+              {plugin.howToUse}
+            </p>
+          )}
+        </div>
+      )}
 
       {plugin.repo ? (
         <a

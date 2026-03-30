@@ -8,7 +8,8 @@
       "icon": "\ud83c\udf99\ufe0f",
       "author": "OwnTerm",
       "description": "Speech-to-text powered by OpenAI Whisper. Runs locally with faster-whisper or connects to the OpenAI API. Supports models from base to large-v3.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins. Choose between local mode (auto-downloads Whisper model) or OpenAI API mode (uses your API key). Hold the microphone button to record, release to transcribe. Set language or leave blank for auto-detect."
     },
     {
       "id": "kokoro-tts",
@@ -18,7 +19,8 @@
       "icon": "\ud83d\udd0a",
       "author": "OwnTerm",
       "description": "High-quality local text-to-speech using the Kokoro model. 15+ voices across American and British English. No cloud API required.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins, then go to Settings > Voice to select a Kokoro voice (prefixed with 'am_' for American or 'af_' for British). Adjust speed with the slider. The first run downloads the model (~500MB). TTS auto-plays after each AI response when enabled."
     },
     {
       "id": "kokoclone-tts",
@@ -28,7 +30,8 @@
       "icon": "\ud83e\uddec",
       "author": "OwnTerm",
       "description": "Clone any voice from a short audio sample. Built on PyTorch and Kokoro with a dedicated Flask server. Downloads ~2GB of models on first use.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins, then open the Clone tab. Upload a 5\u201330 second audio sample of the voice you want to clone. Give it a name and click Clone. Once processed, the cloned voice appears in Settings > Voice. Assign it to any persona for a fully custom voice."
     },
     {
       "id": "claude-cli",
@@ -38,7 +41,8 @@
       "icon": "\u2728",
       "author": "OwnTerm",
       "description": "Use Claude Code CLI as a chat provider inside OwnTerm. Requires the claude CLI installed and authenticated on your machine.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Install Claude Code CLI ('npm install -g @anthropic-ai/claude-code') and authenticate it. Enable this plugin in Settings > Plugins. Go to Settings > AI and select 'Claude CLI' as your provider. Chat messages now route through your local Claude CLI with full streaming support."
     },
     {
       "id": "persona-manager",
@@ -48,7 +52,8 @@
       "icon": "\ud83c\udfad",
       "author": "OwnTerm",
       "description": "Create, edit, import, export, and browse community personas. Includes a gallery for discovering and installing personas from the community.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. Click the persona name in the top bar to open the persona switcher. Create new personas with custom system prompts, voices, and personalities. Browse the community gallery to discover and install shared personas. Export your personas as JSON to share with others."
     },
     {
       "id": "chromadb-memory",
@@ -58,7 +63,8 @@
       "icon": "\ud83e\udde0",
       "author": "OwnTerm",
       "description": "Semantic vector memory powered by ChromaDB and all-MiniLM-L6-v2 embeddings. Replaces keyword search with AI-powered retrieval, deduplication, contradiction detection, and temporal decay.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins. Memories are automatically extracted from conversations and stored as vectors. The AI retrieves relevant memories based on semantic similarity, not just keywords. Tune deduplication threshold, contradiction detection, and decay rate in plugin settings. View all memories in Settings > Memory."
     },
     {
       "id": "continuity",
@@ -68,7 +74,8 @@
       "icon": "\ud83d\udc9f",
       "author": "OwnTerm",
       "description": "Autonomous scheduled tasks with cron scheduling, active hours, and chance gates. Powers the Morning Briefing system and custom automations.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins. Ask the AI to 'create a scheduled task' \u2014 it will use the create_task tool. Tasks run on cron schedules (e.g., '0 9 * * *' for 9 AM daily). Results appear in chat automatically. Configure active hours and chance percentages for randomized tasks."
     },
     {
       "id": "browser-bridge",
@@ -78,7 +85,8 @@
       "icon": "\ud83c\udf10",
       "author": "OwnTerm",
       "description": "Access 55+ web platforms through your existing Chrome browser sessions. GitHub, Reddit, Twitter, Hacker News, and more \u2014 no API keys required. Powered by opencli-rs.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins. Download the opencli-rs binary to ~/.ownterm/plugins/browser-bridge/bin/ and install the Chrome extension. Log into your platforms in Chrome. Ask the AI things like 'check my GitHub notifications' or 'what's trending on Hacker News' \u2014 it reads your actual sessions."
     },
     {
       "id": "memory-tools",
@@ -88,7 +96,8 @@
       "icon": "\ud83d\udcbe",
       "author": "OwnTerm",
       "description": "Save, search, and manage long-term memories via tool calling. Supports categories (identity, preferences, episodic, emotional, facts, technical) and semantic search.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. The AI automatically uses these tools to save and recall information about you. Say 'remember that I prefer dark mode' or 'what do you know about me?' to interact with memory directly. Memories persist across sessions and conversations."
     },
     {
       "id": "meta-tools",
@@ -98,7 +107,8 @@
       "icon": "\ud83d\udd27",
       "author": "OwnTerm",
       "description": "System introspection and prompt self-modification \u2014 12 tools for viewing the system prompt, swapping persona pieces, switching personas, changing voices, and resetting chat.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. Ask the AI to 'show me your system prompt', 'switch to a different persona', 'change your voice to af_sky', or 'what time is it'. These tools let the AI inspect and modify its own configuration at runtime without you opening Settings."
     },
     {
       "id": "notepad-tools",
@@ -108,7 +118,8 @@
       "icon": "\ud83d\udcdd",
       "author": "OwnTerm",
       "description": "Read and write to a scratch notepad file. Append, insert, and delete lines \u2014 a simple persistent scratchpad for the AI.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. Ask the AI to 'write this to the notepad' or 'read the notepad'. The notepad persists between sessions at ~/.ownterm/notepad.txt. Useful for keeping running lists, drafts, or notes the AI can reference later."
     },
     {
       "id": "network-tools",
@@ -118,7 +129,8 @@
       "icon": "\ud83c\udf10",
       "author": "OwnTerm",
       "description": "External IP lookup, internet connectivity check, and website status monitoring. Quick diagnostics for network issues.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. Ask 'what's my IP address?', 'am I connected to the internet?', or 'is google.com up?'. The AI uses these tools to check network status without you leaving the chat."
     },
     {
       "id": "goal-tools",
@@ -128,7 +140,8 @@
       "icon": "\ud83c\udfaf",
       "author": "OwnTerm",
       "description": "Hierarchical goal tracking with progress percentages and journaling. Create goals, subtasks, update progress, and log journal entries.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. Say 'create a goal to learn Rust' or 'show my goals'. Add subtasks, update progress percentages, and log journal entries through conversation. Goals persist at ~/.ownterm/goals.json and carry across sessions."
     },
     {
       "id": "knowledge-tools",
@@ -138,7 +151,8 @@
       "icon": "\ud83d\udcda",
       "author": "OwnTerm",
       "description": "Knowledge base with categories and people contacts. Save, search, and organize information by topic. Store contact details for people you mention.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. Tell the AI facts and it stores them categorized: 'the office WiFi password is abc123' or 'save John's email as john@example.com'. Ask 'what do I know about networking?' to search. Different from memory \u2014 knowledge is explicit facts you tell it, memory is extracted from context."
     },
     {
       "id": "web-tools",
@@ -148,7 +162,8 @@
       "icon": "\ud83d\udd78\ufe0f",
       "author": "OwnTerm",
       "description": "Web search, page fetching, Wikipedia lookups, deep research, and link/image extraction. Six tools for gathering information from the web.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. Ask 'search the web for Next.js 15 changes' or 'look up quantum computing on Wikipedia'. The AI can fetch full web pages, extract links, pull images, and run deep multi-source research on any topic."
     },
     {
       "id": "docs-tools",
@@ -158,7 +173,8 @@
       "icon": "\ud83d\udcc4",
       "author": "OwnTerm",
       "description": "Search OwnTerm project documentation. Helps the AI find answers about how OwnTerm works internally.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. Ask the AI 'how do plugins work in OwnTerm?' or 'what ports are used?' and it searches the built-in documentation to give accurate answers about the system."
     },
     {
       "id": "ai-tools",
@@ -168,7 +184,8 @@
       "icon": "\ud83e\udd16",
       "author": "OwnTerm",
       "description": "Delegate analysis questions to a secondary AI call. Useful for complex reasoning that benefits from a separate context window.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. The AI uses this automatically when a question benefits from a fresh context window \u2014 for example, analyzing a large code block or doing complex reasoning that shouldn't be mixed with conversation history."
     },
     {
       "id": "toolmaker",
@@ -178,7 +195,8 @@
       "icon": "\u2692\ufe0f",
       "author": "OwnTerm",
       "description": "AI self-extension \u2014 create, read, load, list, and delete custom tool plugins at runtime. The AI can build its own tools on the fly.",
-      "repo": null
+      "repo": null,
+      "howToUse": "Enabled by default. Ask the AI to 'create a tool that converts Celsius to Fahrenheit' and it writes a new plugin with manifest.json and handler code. The tool is hot-loaded immediately \u2014 no restart needed. Say 'list my custom tools' or 'delete the temperature tool' to manage them."
     }
   ],
   "community": [
@@ -190,7 +208,8 @@
       "icon": "\ud83c\udfb5",
       "author": "OwnTerm Community",
       "description": "Premium text-to-speech via the ElevenLabs API. 8 pre-configured voices, multilingual support, usage tracking with free-tier limits. Requires an ElevenLabs API key.",
-      "repo": "https://github.com/forty4420/ownterm"
+      "repo": "https://github.com/forty4420/ownterm",
+      "howToUse": "Install from GitHub, enable in Settings > Plugins, and enter your ElevenLabs API key in the plugin settings. Select an ElevenLabs voice in Settings > Voice. Tracks your character usage against the free tier limit."
     },
     {
       "id": "audio-processor",
@@ -200,7 +219,8 @@
       "icon": "\ud83c\udf9b",
       "author": "OwnTerm Community",
       "description": "Professional audio preprocessing before STT \u2014 spectral noise reduction, echo cancellation, voice EQ, and compression. Runs automatically when enabled alongside Whisper.",
-      "repo": "https://github.com/forty4420/ownterm"
+      "repo": "https://github.com/forty4420/ownterm",
+      "howToUse": "Install from GitHub and enable in Settings > Plugins. It runs automatically whenever you record audio for Whisper STT \u2014 no configuration needed. Audio is cleaned up (noise removed, EQ applied, compressed) before transcription for better accuracy."
     },
     {
       "id": "dnd-game-master",
@@ -210,7 +230,8 @@
       "icon": "\u2694\ufe0f",
       "author": "OwnTerm Community",
       "description": "Comprehensive D&D 5e Game Master with campaigns, character sheets, combat tracking, dice rolling, NPCs, world lore, quests, and battle grids. Much enhanced with ChromaDB Memory for semantic recall of game events.",
-      "repo": "https://github.com/forty4420/ownterm"
+      "repo": "https://github.com/forty4420/ownterm",
+      "howToUse": "Install from GitHub and enable in Settings > Plugins. Switch to the Dungeon Master persona for the full experience. Say 'start a new campaign' to begin. The AI manages character sheets, rolls dice, tracks initiative, and voices NPCs. Enable ChromaDB Memory alongside it for persistent game history across sessions."
     }
   ]
 }
