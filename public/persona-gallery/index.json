@@ -9,6 +9,16 @@
       "tags": ["caretaker", "coding", "gentle"],
       "downloadUrl": "https://ownterm.com/persona-gallery/personas/gerty.persona.json",
       "featured": true
+    },
+    {
+      "id": "dungeon-master",
+      "name": "The Dungeon Master",
+      "description": "Immersive D&D 5e Game Master \u2014 voices NPCs like a novel, tracks HP/initiative/quests with tools, adapts tone to any campaign. Pairs with the D&D Game Master plugin for full state tracking and ChromaDB for semantic recall.",
+      "avatar": "\ud83d\udc09",
+      "author": "OwnTerm",
+      "tags": ["dnd", "game-master", "roleplay", "5e", "fantasy"],
+      "downloadUrl": "https://ownterm.com/persona-gallery/personas/dungeon-master.persona.json",
+      "featured": true
     }
   ]
 }
