@@ -14,6 +14,73 @@
     ]
   },
   {
+    "version": "1.0.5",
+    "date": "2026-03-30",
+    "title": "Continuity System",
+    "description": "Autonomous scheduled tasks with cron scheduling, pending result delivery, and ChatView integration.",
+    "changes": [
+      { "type": "feat", "text": "Continuity scheduler \u2014 cron matching, active hours, chance gates, 30s tick loop" },
+      { "type": "feat", "text": "Task store with JSON persistence, execution logs, and pending results queue" },
+      { "type": "feat", "text": "6 continuity tools: create, list, update, delete, run, history" },
+      { "type": "feat", "text": "useTaskResults hook \u2014 polls pending results every 10s, injects into chat" },
+      { "type": "feat", "text": "LLM fetch helpers extracted to shared module for task executor reuse" }
+    ]
+  },
+  {
+    "version": "1.0.4",
+    "date": "2026-03-29",
+    "title": "Prompt Engine Upgrade",
+    "description": "8-component prompt assembly with drift injection, hot-reload, and dual-mode support.",
+    "changes": [
+      { "type": "feat", "text": "8-component prompt assembly \u2014 character, location, relationship, goals, format, scenario, extras, emotions" },
+      { "type": "feat", "text": "Context-aware drift injection with weighted random selection" },
+      { "type": "feat", "text": "Assembled mode UI with component selectors, drift config, and presets" },
+      { "type": "feat", "text": "12 meta-tools for runtime prompt self-modification" },
+      { "type": "feat", "text": "Nova example persona demonstrating assembled mode" }
+    ]
+  },
+  {
+    "version": "1.0.3",
+    "date": "2026-03-29",
+    "title": "Toolmaker + Utility Plugins",
+    "description": "AI self-extension and 10 built-in tool plugins for memory, goals, web, knowledge, and more.",
+    "changes": [
+      { "type": "feat", "text": "Toolmaker \u2014 AI creates, reads, loads, lists, and deletes custom tool plugins at runtime" },
+      { "type": "feat", "text": "Memory Tools, Notepad Tools, Network Tools, Goal Tools" },
+      { "type": "feat", "text": "Knowledge Tools with categories and people contacts" },
+      { "type": "feat", "text": "Web Tools \u2014 search, page fetch, Wikipedia, research, link/image extraction" },
+      { "type": "feat", "text": "Docs Tools and AI Tools (secondary LLM delegation)" }
+    ]
+  },
+  {
+    "version": "1.0.2",
+    "date": "2026-03-29",
+    "title": "Tool Calling Engine",
+    "description": "Full tool calling system with provider adapters, approval gates, rate limiting, and multi-turn execution.",
+    "changes": [
+      { "type": "feat", "text": "Tool engine registry \u2014 register, discover, and filter tools from plugins" },
+      { "type": "feat", "text": "Provider adapters for Anthropic, OpenAI, and Ollama tool calling formats" },
+      { "type": "feat", "text": "Multi-turn tool execution loop with safety limits and timeouts" },
+      { "type": "feat", "text": "Tool approval modal for dangerous operations (approve/deny per call)" },
+      { "type": "feat", "text": "Inline tool activity and result rendering in message bubbles" },
+      { "type": "feat", "text": "Rate limiting and permission checks per tool call" }
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "date": "2026-03-28",
+    "title": "Community Plugins + Fixes",
+    "description": "ElevenLabs TTS, Audio Processor, D&D Game Master, and ChromaDB Memory plugin.",
+    "changes": [
+      { "type": "feat", "text": "ChromaDB Memory plugin \u2014 semantic vector memory with embeddings, dedup, and decay" },
+      { "type": "feat", "text": "ElevenLabs TTS community plugin with 8 voices and usage tracking" },
+      { "type": "feat", "text": "Audio Processor \u2014 spectral noise reduction, echo cancellation, voice EQ" },
+      { "type": "feat", "text": "D&D Game Master with campaigns, combat, dice, NPCs, and battle grids" },
+      { "type": "feat", "text": "Dungeon Master persona v1.1 \u2014 tool routing, combat flow, NPC voicing" },
+      { "type": "fix", "text": "SSE done event handling, GERTY prompt quoting, plugin lifecycle fixes" }
+    ]
+  },
+  {
     "version": "1.0.0",
     "date": "2026-03-28",
     "title": "Initial Release",
