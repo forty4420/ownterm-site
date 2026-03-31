@@ -199,6 +199,17 @@
       "howToUse": "Enabled by default. Ask the AI to 'create a tool that converts Celsius to Fahrenheit' and it writes a new plugin with manifest.json and handler code. The tool is hot-loaded immediately \u2014 no restart needed. Say 'list my custom tools' or 'delete the temperature tool' to manage them."
     },
     {
+      "id": "fish-speech-tts",
+      "name": "Fish Speech TTS",
+      "version": "1.0.0",
+      "type": "tts",
+      "icon": "\ud83d\udc1f",
+      "author": "OwnTerm",
+      "description": "Emotionally expressive TTS via Fish Speech 1.5. Supports persona emotion tags and optional voice cloning. CPU-viable with GPU option for higher quality.",
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins. Select a fish: voice in Settings > Voice. For voice cloning, set a reference audio path (.wav/.mp3, 10-30 seconds) in plugin settings. Enable Emotion-Aware TTS to auto-inject persona emotions as Fish Speech tags. Pair with Persona Manager for full emotion-driven speech."
+    },
+    {
       "id": "shell-tools",
       "name": "Shell Tools",
       "version": "1.0.0",
