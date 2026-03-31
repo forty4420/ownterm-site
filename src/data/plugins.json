@@ -239,17 +239,17 @@
     {
       "id": "dev-environment",
       "name": "Dev Environment",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "type": "tool",
       "icon": "\ud83d\udcbb",
       "author": "OwnTerm",
-      "description": "Mini-IDE embedded alongside chat. Phase 1 ships a real shell (xterm.js + node-pty) in a drag-resizable split panel. Set any workspace path and get a persistent PTY that survives panel switches. File tree, Monaco editor, and AI diff review coming in Phase 2.",
+      "description": "Full mini-IDE embedded alongside chat. Real terminal (xterm.js + node-pty), file tree (react-arborist), Monaco multi-file editor with syntax highlighting, and AI diff review with per-file accept/reject and git commit — all in a drag-resizable split panel.",
       "recommended": true,
       "category": "coding",
       "combos": ["claude-cli", "shell-tools"],
       "port": 8910,
       "repo": null,
-      "howToUse": "Enable in Settings > Plugins. Click the Dev tab in the top nav to open the split panel. Click 'Set workspace' to point it at a project folder \u2014 the terminal opens there by default. The shell persists across panel switches, so you can type in the terminal, switch to chat to ask a question, and switch back without losing your session."
+      "howToUse": "Enable in Settings > Plugins. Click the Dev tab to open the split panel. Set your workspace path — the terminal, file tree, and editor all root to that folder. Run commands in Terminal, browse and open files in Files, edit with syntax highlighting in Editor (Ctrl+S saves), and review AI-generated changes in Diffs with per-file accept/reject and one-click git commit."
     }
   ],
   "community": [
