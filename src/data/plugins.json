@@ -209,20 +209,6 @@
       "howToUse": "Enabled by default. Ask the AI to 'create a tool that converts Celsius to Fahrenheit' and it writes a new plugin with manifest.json and handler code. The tool is hot-loaded immediately \u2014 no restart needed. Say 'list my custom tools' or 'delete the temperature tool' to manage them."
     },
     {
-      "id": "fish-speech-tts",
-      "name": "Fish Speech TTS",
-      "version": "1.0.0",
-      "type": "tts",
-      "icon": "\ud83d\udc1f",
-      "author": "OwnTerm",
-      "description": "Emotionally expressive TTS via Fish Speech 1.5. Supports persona emotion tags and optional voice cloning. CPU-viable with GPU option for higher quality.",
-      "recommended": true,
-      "category": "tts",
-      "combos": ["persona-manager"],
-      "repo": null,
-      "howToUse": "Enable in Settings > Plugins. Select a fish: voice in Settings > Voice. For voice cloning, set a reference audio path (.wav/.mp3, 10-30 seconds) in plugin settings. Enable Emotion-Aware TTS to auto-inject persona emotions as Fish Speech tags. Pair with Persona Manager for full emotion-driven speech."
-    },
-    {
       "id": "shell-tools",
       "name": "Shell Tools",
       "version": "1.0.0",
@@ -236,6 +222,34 @@
       "port": 8851,
       "repo": null,
       "howToUse": "Enable in Settings > Plugins. Once enabled, any AI provider can run commands and interact with your filesystem. New: configure a Watch Directory in settings to auto-snapshot file changes via git stash. Manual snapshot tools (create, list, restore, diff) give the AI a safety net before making changes."
+    },
+    {
+      "id": "lattice-bg",
+      "name": "Lattice Background",
+      "version": "1.0.0",
+      "type": "theme",
+      "icon": "\ud83c\udf10",
+      "author": "OwnTerm",
+      "description": "TRON/HUD-inspired animated canvas background with voice-reactive wireframe sphere, cityscape, lightning, particles, and light cycles. Three modes: off, ambient, and reactive (responds to AI thinking and speaking).",
+      "recommended": true,
+      "category": "theme",
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins. Go to Settings > Plugins > Lattice BG settings to choose Animation Mode (Ambient for gentle visuals, Reactive for voice-synced animation) and Performance tier. Reactive mode pulses and shifts the grid in real time as the AI thinks and speaks."
+    },
+    {
+      "id": "dev-environment",
+      "name": "Dev Environment",
+      "version": "1.0.0",
+      "type": "tool",
+      "icon": "\ud83d\udcbb",
+      "author": "OwnTerm",
+      "description": "Mini-IDE embedded alongside chat. Phase 1 ships a real shell (xterm.js + node-pty) in a drag-resizable split panel. Set any workspace path and get a persistent PTY that survives panel switches. File tree, Monaco editor, and AI diff review coming in Phase 2.",
+      "recommended": true,
+      "category": "coding",
+      "combos": ["claude-cli", "shell-tools"],
+      "port": 8910,
+      "repo": null,
+      "howToUse": "Enable in Settings > Plugins. Click the Dev tab in the top nav to open the split panel. Click 'Set workspace' to point it at a project folder \u2014 the terminal opens there by default. The shell persists across panel switches, so you can type in the terminal, switch to chat to ask a question, and switch back without losing your session."
     }
   ],
   "community": [
