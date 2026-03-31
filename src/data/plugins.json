@@ -19,6 +19,8 @@
       "icon": "\ud83d\udd0a",
       "author": "OwnTerm",
       "description": "High-quality local text-to-speech using the Kokoro model. 15+ voices across American and British English. No cloud API required.",
+      "recommended": true,
+      "category": "tts",
       "repo": null,
       "howToUse": "Enable in Settings > Plugins, then go to Settings > Voice to select a Kokoro voice (prefixed with 'am_' for American or 'af_' for British). Adjust speed with the slider. The first run downloads the model (~500MB). TTS auto-plays after each AI response when enabled."
     },
@@ -41,6 +43,8 @@
       "icon": "\u2728",
       "author": "OwnTerm",
       "description": "Use Claude Code CLI as a chat provider inside OwnTerm. Requires the claude CLI installed and authenticated on your machine.",
+      "recommended": true,
+      "category": "coding",
       "repo": null,
       "howToUse": "Install Claude Code CLI ('npm install -g @anthropic-ai/claude-code') and authenticate it. Enable this plugin in Settings > Plugins. Go to Settings > AI and select 'Claude CLI' as your provider. Chat messages now route through your local Claude CLI with full streaming support."
     },
@@ -52,6 +56,9 @@
       "icon": "\ud83c\udfad",
       "author": "OwnTerm",
       "description": "Create, edit, import, export, and browse community personas. Includes a gallery for discovering and installing personas from the community.",
+      "recommended": true,
+      "category": "voice",
+      "combos": ["fish-speech-tts"],
       "repo": null,
       "howToUse": "Enabled by default. Click the persona name in the top bar to open the persona switcher. Create new personas with custom system prompts, voices, and personalities. Browse the community gallery to discover and install shared personas. Export your personas as JSON to share with others."
     },
@@ -63,6 +70,9 @@
       "icon": "\ud83e\udde0",
       "author": "OwnTerm",
       "description": "Semantic vector memory powered by ChromaDB and all-MiniLM-L6-v2 embeddings. Replaces keyword search with AI-powered retrieval, deduplication, contradiction detection, and temporal decay. Pin any memory to guarantee it always appears in context, immune to decay.",
+      "recommended": true,
+      "category": "memory",
+      "combos": ["dnd-game-master", "persona-manager"],
       "repo": null,
       "howToUse": "Enable in Settings > Plugins. Memories are automatically extracted from conversations and stored as vectors. The AI retrieves relevant memories based on semantic similarity, not just keywords. Pin critical memories (hover a memory row and click the pin icon) to guarantee they always appear in every conversation. Tune deduplication threshold, contradiction detection, and decay rate in plugin settings. View all memories in Settings > Memory."
     },
@@ -206,6 +216,9 @@
       "icon": "\ud83d\udc1f",
       "author": "OwnTerm",
       "description": "Emotionally expressive TTS via Fish Speech 1.5. Supports persona emotion tags and optional voice cloning. CPU-viable with GPU option for higher quality.",
+      "recommended": true,
+      "category": "tts",
+      "combos": ["persona-manager"],
       "repo": null,
       "howToUse": "Enable in Settings > Plugins. Select a fish: voice in Settings > Voice. For voice cloning, set a reference audio path (.wav/.mp3, 10-30 seconds) in plugin settings. Enable Emotion-Aware TTS to auto-inject persona emotions as Fish Speech tags. Pair with Persona Manager for full emotion-driven speech."
     },
@@ -217,6 +230,9 @@
       "icon": "\ud83d\udda5\ufe0f",
       "author": "OwnTerm",
       "description": "Run shell commands, read/write files, list directories, and manage git workspace snapshots. Auto-watches a directory and checkpoints changes \u2014 safety net for AI-assisted coding sessions.",
+      "recommended": true,
+      "category": "coding",
+      "combos": ["chromadb-memory"],
       "port": 8851,
       "repo": null,
       "howToUse": "Enable in Settings > Plugins. Once enabled, any AI provider can run commands and interact with your filesystem. New: configure a Watch Directory in settings to auto-snapshot file changes via git stash. Manual snapshot tools (create, list, restore, diff) give the AI a safety net before making changes."
@@ -248,6 +264,9 @@
     {
       "id": "dnd-game-master",
       "name": "D&D Game Master",
+      "recommended": true,
+      "category": "gaming",
+      "combos": ["chromadb-memory"],
       "version": "1.0.0",
       "type": "tool",
       "icon": "\u2694\ufe0f",
