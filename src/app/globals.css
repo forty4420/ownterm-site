@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #3b82f6;
-  --color-accent-hover: #60a5fa;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  /* --- Color System (OKLCH) --- */
+  --color-surface-0: oklch(0.11 0.015 240);
+  --color-surface-1: oklch(0.14 0.015 240);
+  --color-surface-2: oklch(0.17 0.018 240);
+  --color-surface-3: oklch(0.21 0.02 240);
+
+  --color-text-primary: oklch(0.95 0.01 240);
+  --color-text-secondary: oklch(0.68 0.02 240);
+  --color-text-muted: oklch(0.50 0.015 240);
+
+  --color-accent: oklch(0.72 0.17 195);
+  --color-accent-hover: oklch(0.80 0.14 195);
+  --color-accent-dim: oklch(0.45 0.10 195);
+  --color-accent-glow: oklch(0.72 0.17 195 / 0.25);
+
+  --color-warm: oklch(0.78 0.14 75);
+  --color-warm-dim: oklch(0.55 0.10 75);
+
+  --color-border: oklch(1 0 0 / 0.08);
+  --color-border-hover: oklch(1 0 0 / 0.15);
+  --color-border-accent: oklch(0.72 0.17 195 / 0.3);
+
+  /* --- Typography --- */
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
+/* --- Base --- */
 html {
   color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #09090b;
-  color: #fafafa;
-  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--color-surface-0);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #3b82f680;
+  background: oklch(0.72 0.17 195 / 0.4);
   color: white;
 }
 
 code, pre, .font-mono {
   font-family: var(--font-mono);
+}
+
+/* --- Dot Grid Background --- */
+.dot-grid {
+  background-image: radial-gradient(circle, oklch(1 0 0 / 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* --- Glow Effects --- */
+.glow-accent {
+  box-shadow:
+    0 0 20px oklch(0.72 0.17 195 / 0.15),
+    0 0 60px oklch(0.72 0.17 195 / 0.08);
+}
+
+.glow-text {
+  text-shadow:
+    0 0 30px oklch(0.72 0.17 195 / 0.4),
+    0 0 60px oklch(0.72 0.17 195 / 0.15);
+}
+
+/* --- Gradient Border Card --- */
+.card-gradient {
+  position: relative;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  transition: border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-gradient:hover {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 0 30px oklch(0.72 0.17 195 / 0.08);
+  transform: translateY(-2px);
+}
+
+/* --- Keyframe Animations --- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.25, 1, 0.5, 1) backwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out backwards;
+}
+
+/* Stagger delays */
+.delay-1 { animation-delay: 100ms; }
+.delay-2 { animation-delay: 200ms; }
+.delay-3 { animation-delay: 300ms; }
+.delay-4 { animation-delay: 400ms; }
+.delay-5 { animation-delay: 500ms; }
+.delay-6 { animation-delay: 600ms; }
+.delay-7 { animation-delay: 700ms; }
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(1 0 0 / 0.12);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(1 0 0 / 0.2);
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in {
+    animation: fade-in 0.2s ease-out backwards;
+  }
 }

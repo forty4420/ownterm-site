@@ -2,16 +2,24 @@ interface FeatureCardProps {
   icon: string;
   title: string;
   description: string;
+  index: number;
 }
 
-export function FeatureCard({ icon, title, description }: FeatureCardProps) {
+export function FeatureCard({ icon, title, description, index }: FeatureCardProps) {
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 transition-colors hover:border-zinc-700">
-      <div className="mb-3 text-2xl">{icon}</div>
-      <h3 className="mb-2 font-mono text-lg font-semibold text-zinc-100">
+    <div
+      className={`card-gradient animate-fade-up p-6 sm:p-7`}
+      style={{ animationDelay: `${(index + 1) * 80}ms` }}
+    >
+      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--color-surface-2)] text-xl">
+        {icon}
+      </div>
+      <h3 className="mb-2 font-[var(--font-display)] text-lg font-semibold text-[var(--color-text-primary)]">
         {title}
       </h3>
-      <p className="text-sm leading-relaxed text-zinc-400">{description}</p>
+      <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+        {description}
+      </p>
     </div>
   );
 }

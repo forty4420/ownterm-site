@@ -11,27 +11,27 @@ interface GalleryPersona {
 
 export function PersonaCard({ persona }: { persona: GalleryPersona }) {
   return (
-    <div className="flex flex-col rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 transition-colors hover:border-zinc-700">
+    <div className="card-gradient flex flex-col p-6">
       <div className="mb-3 flex items-start justify-between">
-        <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 text-2xl">
+        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--color-surface-2)] text-2xl">
           {persona.avatar}
-        </span>
+        </div>
         {persona.featured && (
-          <span className="rounded-full border border-yellow-500/30 bg-yellow-500/20 px-2.5 py-0.5 text-xs font-medium text-yellow-400">
+          <span className="rounded-full border border-[var(--color-warm-dim)] bg-[var(--color-warm)]/15 px-2.5 py-0.5 text-xs font-medium text-[var(--color-warm)]">
             Featured
           </span>
         )}
       </div>
 
-      <h3 className="mb-1 font-mono text-lg font-semibold text-zinc-100">
+      <h3 className="mb-1 font-[var(--font-display)] text-lg font-semibold text-[var(--color-text-primary)]">
         {persona.name}
       </h3>
 
-      <div className="mb-3 text-xs text-zinc-500">
+      <div className="mb-3 text-xs text-[var(--color-text-muted)]">
         by {persona.author}
       </div>
 
-      <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-400">
+      <p className="mb-4 flex-1 text-sm leading-relaxed text-[var(--color-text-secondary)]">
         {persona.description}
       </p>
 
@@ -40,7 +40,7 @@ export function PersonaCard({ persona }: { persona: GalleryPersona }) {
           {persona.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-zinc-700 px-2 py-0.5 text-xs text-zinc-400"
+              className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface-2)] px-2 py-0.5 text-xs text-[var(--color-text-muted)]"
             >
               {tag}
             </span>
@@ -51,7 +51,7 @@ export function PersonaCard({ persona }: { persona: GalleryPersona }) {
       <a
         href={persona.downloadUrl}
         download={`${persona.id}.persona.json`}
-        className="mt-auto inline-flex items-center gap-2 text-sm text-blue-400 transition-colors hover:text-blue-300"
+        className="mt-auto inline-flex items-center gap-2 text-sm text-[var(--color-accent)] transition-colors duration-200 hover:text-[var(--color-accent-hover)]"
       >
         <svg
           className="h-4 w-4"

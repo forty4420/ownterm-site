@@ -41,12 +41,14 @@ export default function PersonasPage() {
   }, []);
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
-      <div className="mb-12">
-        <h1 className="font-mono text-3xl font-bold">Persona Gallery</h1>
-        <p className="mt-3 text-zinc-400">
+    <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mb-14">
+        <h1 className="animate-fade-up font-[var(--font-display)] text-3xl font-bold tracking-tight sm:text-4xl">
+          Persona Gallery
+        </h1>
+        <p className="animate-fade-up delay-1 mt-4 max-w-xl text-[var(--color-text-secondary)]">
           Browse community personas for OwnTerm. Download a{" "}
-          <code className="rounded bg-zinc-800 px-1.5 py-0.5 text-sm text-zinc-300">
+          <code className="rounded bg-[var(--color-surface-2)] px-1.5 py-0.5 text-sm text-[var(--color-text-primary)]">
             .persona.json
           </code>{" "}
           file and import it into the Persona Manager plugin.
@@ -54,33 +56,34 @@ export default function PersonasPage() {
       </div>
 
       {/* Gallery */}
-      <section className="mb-16">
-        <h2 className="mb-6 font-mono text-xl font-semibold text-zinc-200">
+      <section className="mb-20">
+        <h2 className="mb-6 font-[var(--font-display)] text-xl font-semibold text-[var(--color-text-primary)]">
           Available Personas
         </h2>
 
         {loading && (
-          <div className="rounded-xl border border-zinc-800 bg-zinc-900/30 px-8 py-12 text-center">
-            <p className="text-zinc-500">Loading gallery...</p>
+          <div className="card-gradient px-8 py-14 text-center">
+            <div className="mx-auto h-6 w-6 rounded-full border-2 border-[var(--color-accent)] border-t-transparent animate-spin" />
+            <p className="mt-4 text-[var(--color-text-muted)]">Loading gallery...</p>
           </div>
         )}
 
         {error && (
-          <div className="rounded-xl border border-red-500/30 bg-red-500/10 px-8 py-12 text-center">
+          <div className="rounded-2xl border border-red-500/25 bg-red-500/10 px-8 py-14 text-center">
             <p className="text-red-400">{error}</p>
           </div>
         )}
 
         {!loading && !error && personas.length === 0 && (
-          <div className="rounded-xl border border-dashed border-zinc-700 bg-zinc-900/30 px-8 py-12 text-center">
-            <p className="text-lg text-zinc-500">
+          <div className="rounded-2xl border border-dashed border-[var(--color-border-hover)] bg-[var(--color-surface-1)] px-8 py-14 text-center">
+            <p className="text-lg text-[var(--color-text-muted)]">
               No personas yet. Be the first to submit one!
             </p>
           </div>
         )}
 
         {!loading && !error && personas.length > 0 && (
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             {personas.map((persona) => (
               <PersonaCard key={persona.id} persona={persona} />
             ))}
@@ -89,26 +92,26 @@ export default function PersonasPage() {
       </section>
 
       {/* Submit CTA */}
-      <section className="rounded-xl border border-zinc-800 bg-zinc-900/50 px-8 py-8 text-center">
-        <h3 className="font-mono text-lg font-semibold">
+      <section className="card-gradient px-8 py-10 text-center">
+        <h3 className="font-[var(--font-display)] text-lg font-semibold text-[var(--color-text-primary)]">
           Submit Your Persona
         </h3>
-        <p className="mt-2 text-sm text-zinc-400">
+        <p className="mt-2 text-sm text-[var(--color-text-secondary)]">
           Create a persona in OwnTerm, export it, and submit a PR to get it
           listed here.
         </p>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
           <a
             href="https://github.com/forty4420/ownterm-site/blob/main/public/persona-gallery/CONTRIBUTING.md"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-lg bg-blue-600 px-5 py-2.5 font-mono text-sm font-medium text-white transition-colors hover:bg-blue-500"
+            className="glow-accent rounded-xl bg-[var(--color-accent)] px-6 py-3 font-mono text-sm font-semibold text-[var(--color-surface-0)] transition-all duration-300 hover:brightness-110"
           >
             Contributing Guide
           </a>
           <Link
             href="/docs/authoring"
-            className="inline-block rounded-lg border border-zinc-700 px-5 py-2.5 font-mono text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-500 hover:text-white"
+            className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-1)] px-6 py-3 font-mono text-sm font-semibold text-[var(--color-text-primary)] transition-all duration-300 hover:border-[var(--color-border-hover)] hover:bg-[var(--color-surface-2)]"
           >
             Plugin Docs
           </Link>
